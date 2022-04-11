@@ -1,0 +1,102 @@
+body{
+      overflow: hidden;
+      /* ff 3.6+ */
+      background:-moz-linear-gradient(90deg, rgba(0, 149, 255, 1) 26%, rgba(7, 58, 187, 1) 83%); 
+
+      /* safari 5.1+,chrome 10+ */
+      background:-webkit-linear-gradient(90deg, rgba(0, 149, 255, 1) 26%, rgba(7, 58, 187, 1) 83%);
+  
+      /* opera 11.10+ */
+      background:-o-linear-gradient(90deg, rgba(0, 149, 255, 1) 26%, rgba(7, 58, 187, 1) 83%);
+  
+      /* ie 6-9 */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#073ABB', endColorstr='#0095FF', GradientType=0 );
+  
+      /* ie 10+ */
+      background:-ms-linear-gradient(90deg, rgba(0, 149, 255, 1) 26%, rgba(7, 58, 187, 1) 83%);
+  
+      /* global 94%+ browsers support */
+      background:linear-gradient(90deg, rgba(0, 149, 255, 1) 26%, rgba(7, 58, 187, 1) 83%);
+
+}
+
+/*
+    - rgba : misy opacity @ farany
+    - position : (relative/ absolute/ fixed/ sticky/ static= par defaut)
+      => top, left, right, bottom
+      relative: par rapport à son position normal
+      absolute: par à son parent
+    - transform : il nous permet de définir l'animation qu'on veut réaliser
+      => translate, rotate, scale, skew, ...
+    - @keyframes: il nous permet de créer notre propre animation   
+*/
+
+
+.diva{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -100px;
+    left: 600px;
+    animation: back_anim 15s infinite backwards;
+    background: rgba(242, 235, 235, 0.2);
+}
+
+.divb{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -100px;
+    left: 900px;
+    animation: back_anim 20s infinite backwards;
+    background: rgba(242, 235, 235, 0.2);
+}
+
+.divc{
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    animation: back_anim 20s infinite backwards;
+    background: rgba(242, 235, 235, 0.2);
+}
+.divd{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: -100px;
+    left: 300px;
+    animation: back_anim 15s infinite backwards;
+    background: rgba(242, 235, 235, 0.2);
+}
+.dive{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: -100px;
+    left: 1200px;
+    animation: back_anim 15s infinite backwards;
+    background: rgba(242, 235, 235, 0.2);
+}
+
+
+/**** Animation ****/
+
+@keyframes back_anim {
+    0%{
+        transform: translate(0, 0) rotate(0);
+    }
+    25%{
+        transform: translate(50px, 250px) rotate(45deg);
+    }
+    50%{
+        transform: translate(100px, 500px) rotate(90deg);
+    }
+    75%{
+        transform: translate(200px, 750px) rotate(135deg);
+    }
+    100%{
+        transform: translate(400px, 1000px) rotate(180deg);
+    }
+}
