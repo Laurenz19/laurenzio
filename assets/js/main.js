@@ -1,10 +1,12 @@
 import {showCard, browserName, menu, current} from './useful.js';
+
 /**
  * Header & Menu
  */
 
  $('.top-menu').find('li:first').css({
-    "color":"rgb(4, 34, 113)"
+    /* "color":"rgb(4, 34, 113)" */
+    "color": "rgb(95, 6, 173)"
  })
 
 $('.top-menu').find('li').click(function(){
@@ -15,7 +17,8 @@ $('.top-menu').find('li').click(function(){
     })
 
     $(this).css({
-        "color":"rgb(4, 34, 113)"
+        /* "color":"rgb(4, 34, 113)" */
+        "color": "rgb(95, 6, 173)"
     })
     showCard(name);
 })
@@ -50,3 +53,16 @@ if(browserName == "Chrome"){
         
     });
 }
+
+/* Home card */
+$('#button').find('span:nth-child(2)').click(function(){
+    $('.top-menu').find(`li[name="${current}"]`).css({
+        "color": "rgb(7, 36, 59)"
+    })
+    
+    $('.top-menu').find('li[name="contact-card"]').css({
+        "color": "rgb(95, 6, 173)"
+    })
+
+    showCard("contact-card");
+ })
