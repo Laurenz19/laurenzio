@@ -5,8 +5,7 @@ import {showCard, browserName, menu, current} from './useful.js';
  */
 
  $('.top-menu').find('li:first').css({
-    /* "color":"rgb(4, 34, 113)" */
-    "color": "rgb(95, 6, 173)"
+    "color":"rgb(4, 34, 113)"
  })
 
 $('.top-menu').find('li').click(function(){
@@ -17,17 +16,16 @@ $('.top-menu').find('li').click(function(){
     })
 
     $(this).css({
-        /* "color":"rgb(4, 34, 113)" */
-        "color": "rgb(95, 6, 173)"
+        "color":"rgb(4, 34, 113)"
     })
     showCard(name);
 })
 
 if(browserName == "Chrome"){
-    $(`#container`).css({
+   $(`#container`).css({
         "position":"absolute",
-        "top":"-75px",
-        "left":"-25px"
+        "top":"-25px",
+        "left":"0px"
         
     })
     $(`#home-card`).css({
@@ -61,7 +59,7 @@ $('#button').find('span:nth-child(2)').click(function(){
     })
     
     $('.top-menu').find('li[name="contact-card"]').css({
-        "color": "rgb(95, 6, 173)"
+        "color":"rgb(4, 34, 113)"
     })
 
     showCard("contact-card");
