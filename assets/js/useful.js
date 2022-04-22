@@ -4,8 +4,9 @@ export let menu = [
 export let current = menu[0]
 
 function hide(name, state){
-    
+    console.log(state)
     if(state == true){
+       
         $(`#${name}`).css({
             "display": "none"
         })

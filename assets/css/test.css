@@ -1,0 +1,14 @@
+html{
+    overflow: hidden;
+}
+
+.test{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 90%;
+    height: 900px;
+    text-align: justify;
+    margin: 50px auto;
+    overflow-y: auto;
+}

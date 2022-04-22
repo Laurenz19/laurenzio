@@ -1,8 +1,10 @@
 import {showCard, browserName, menu, current} from './useful.js';
 
-/**
- * Header & Menu
- */
+
+/* Background */
+$('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>')
+
+/* Header & menu */
 
  $('.top-menu').find('li:first').css({
     "color":"rgb(4, 34, 113)"

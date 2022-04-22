@@ -63,8 +63,7 @@ body{
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+    bottom: -150px;  
 }
 
 .circles li:nth-child(1){
@@ -228,8 +227,8 @@ div#home-card{
 
 /*other cards*/
 #about-card, #resume-card, #works-card, #contact-card{
-    height: 553px;
     width: 685px;
+    height: 553px;
     display: inline-block;
     position: absolute;
     top:103px;
@@ -376,6 +375,11 @@ div#social{
 /* About Card */
 div.card-content{
     margin-left: 5px;
+    max-height: 553px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    scrollbar-width: thin;
+    z-index: 1;
 }
 
 div.title{
@@ -389,20 +393,16 @@ div.title span{
     color: rgb(4, 34, 113);
 }
 
-div.title span::before, span#service-title::before{
+div.title span::before{
     content: "";
-    position: absolute;
-    left: 19px;
-    top:20px;
+    position: relative;
+    display: inline-block;
+    left: 16px;
+    top: 9px;
     background: rgba(4, 34, 113, 0.09);
     height: 26px;
     width: 26px;
     border-radius: 26px;
-}
-
-div.title span#service-title::before{
-    left: 19px;
-    top:390px;
 }
 
 div.card-content hr{
@@ -420,7 +420,7 @@ div.card-content hr{
 
 div.content{
     text-align: justify;
-    margin: 50px;
+    margin: 30px 50px;
     color: rgb(2, 26, 37);
     font-family: sans-serif;
     font-size: 15px;
@@ -428,6 +428,13 @@ div.content{
 
 .cols span{
     color: rgb(4, 34, 113);
+}
+
+div#service-items{
+    color: rgb(2, 26, 37);
+    font-family: sans-serif;
+    font-size: 15px;
+    margin: 30px 50px;
 }
 
 
