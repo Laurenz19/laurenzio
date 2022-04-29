@@ -1,8 +1,10 @@
 body{
       overflow: hidden;
-      background: rgb(8,2,58);
-      background: linear-gradient(90deg, rgba(8,2,58,1) 0%, rgba(8,23,83,1) 36%, rgba(10,53,92,1) 91%); 
-      font-family: 'Signika Negative', sans-serif;
+      background: rgb(5,2,36);
+      background: linear-gradient(90deg, rgba(5,2,36,1) 0%, rgba(2,12,54,1) 36%, rgba(2,29,39,1) 91%); 
+      /* font-family: 'Signika Negative', sans-serif; */
+      font-family:sans-serif;
+      --position: 0
 }
 
 /**** Animation ****/
@@ -42,6 +44,97 @@ body{
         transform: translateX(-400px);
         opacity: 0;
      }
+}
+
+
+@keyframes slideItem_left {
+    from{
+        transform: translateX(var(--position));
+    }
+    to{
+        transform: translateX(-315px);
+    }
+
+}
+
+@keyframes slideItem_right {
+    from{
+        transform: translateX(-315px);
+    }
+    to{ 
+        transform: translateX(var(--position));
+    }
+}
+
+#myself{
+    position: relative;
+    top:15px;
+    left: 50px;
+    font-family:'Trebuchet MS', sans-serif;
+  /*  font-family: 'Square Peg', cursive; */
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(226, 223, 223);
+}
+
+#myself span{
+    color: #55708b;
+    font-size: 17px;
+}
+
+#mySocial{
+    position: relative;
+    left:1450px;
+    top:400px;
+    color: rgb(226, 223, 223);
+}
+
+
+#mySocial span{
+    position: absolute;
+    left:13px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    font-size: 13px;
+    font-weight: 600;
+   /*  font-family: 'Square Peg', cursive; */
+}
+
+#mySocial span::after{
+   content: "";
+   position: absolute;
+   display: block;
+   right: -30px;
+   top: -11px;
+   width: 1px;
+   height: 40px;
+   transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+   background-color: rgb(226, 223, 223);
+}
+
+#mySocial ul{
+  position: relative;
+  top:100px;
+  left:-3px
+}
+
+#mySocial li, #myContact li{
+    list-style: none;
+    margin: 5px 0px;
+}
+
+#mySocial li i{
+    color: rgb(226, 223, 223);
+    font-size: 13px;
+}
+
+#myContact{
+    position: absolute;
+    left: 15px;
+    top:590px;
+    color: rgb(226, 223, 223);
+    font-size: 11px;
 }
 
 /***** Container *****/
@@ -147,6 +240,9 @@ body{
 div#container{
     margin:50px auto 0 auto;
     width: 1300px;
+    position: absolute;
+    top: -50px;
+    left: 60px;
     z-index: 1;
 }
 
@@ -172,7 +268,8 @@ header li{
 
 header li span{
    display: block;
-   font-size: 12px;
+   font-size: 10px;
+   font-weight: bold;
    margin: 5px;
 }
 
@@ -228,7 +325,7 @@ div#home-card{
 /*other cards*/
 #about-card, #resume-card, #works-card, #contact-card{
     width: 685px;
-    height: 553px;
+    height: 555px;
     display: inline-block;
     position: absolute;
     top:103px;
@@ -288,7 +385,8 @@ div#name{
     margin: 0 auto;
     width: 100%;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 500;
     color: rgb(2, 57, 80);
 }
 
@@ -297,9 +395,14 @@ div#title{
     top: 370px;
     margin: 0 auto;
     width: 100%;
-    font-size: 19px;
+    font-size: 17px;
     text-align: center;
-    color: rgba(2,96,115,1);
+    font-weight: bold;
+    color: rgb(2, 51, 115);
+}
+
+div.titles{
+   width: 50%;
 }
 
 .typed-cursor{
@@ -356,7 +459,8 @@ div#social{
     margin: 50px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 #button span:hover{
@@ -374,18 +478,36 @@ div#social{
 
 /* About Card */
 div.card-content{
-    margin-left: 5px;
+    margin:0px 2px 5px 5px;
     max-height: 553px;
     overflow-y:auto;
     overflow-x:hidden;
+
+    /* for firefox */
     scrollbar-width: thin;
-    z-index: 1;
+    scrollbar-face-color: rgb(81, 89, 109); /* Firefox 63 compatibility */
+    scrollbar-track-color: rgb(241, 244, 244); /* Firefox 63 compatibility */
+    scrollbar-color: rgb(81, 89, 109) rgb(241, 244, 244);
 }
 
+div.card-content::-webkit-scrollbar{
+   width: 8px;
+}
+
+div.card-content::-webkit-scrollbar-track{
+    background-color:rgb(241, 244, 244);
+}
+
+div.card-content::-webkit-scrollbar-thumb{
+    background-color:rgb(81, 89, 109);
+    border-radius: 10px;
+}
+
+
 div.title{
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
-    margin: 15px 25px;
+    margin: 20px 25px;
     color: rgb(5, 42, 58);
 }
 
@@ -421,7 +543,7 @@ div.card-content hr{
 div.content{
     text-align: justify;
     margin: 30px 50px;
-    color: rgb(2, 26, 37);
+    color: rgb(66, 73, 75);
     font-family: sans-serif;
     font-size: 15px;
 }
@@ -431,11 +553,253 @@ div.content{
 }
 
 div#service-items{
-    color: rgb(2, 26, 37);
+    color: rgb(40, 50, 54);
     font-family: sans-serif;
     font-size: 15px;
     margin: 30px 50px;
 }
+
+div#info-list {
+    position: relative;
+    left: -12px;
+    width: 620px;   
+    color: rgb(60, 79, 86); 
+}
+
+div#info-list ul{
+   padding: 0px;
+}
+
+div#info-list ul::after{
+   content: "";
+   clear: both;
+   display: block;
+ }
+
+div#info-list li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 26px;
+    font-size: 14px;
+    text-align: start;
+}
+
+div#info-list label{
+   /* color: rgb(2, 51, 115); */
+   font-weight: bold;
+}
+
+#about-card content{
+    font-size: 14px;
+}
+
+div#info-list li:nth-child(odd){
+    width: 40%;
+}
+
+div#info-list li:nth-child(even){
+    float: left;
+    width: 40%;
+}
+
+.service-item .name{
+    text-align: center;
+}
+
+#quote{
+    quotes: '“';
+    text-align: center;
+}
+
+#quote blockquote{
+   font-size: 21px;
+   font-family: 'Dancing Script', cursive;
+   /* font-family: 'Square Peg', cursive; */
+}
+
+#quote img{
+    margin: 0px auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+#quote #author-name{
+    font-size: 11px;
+    font-weight: bold;
+    margin: 7px auto;
+}
+
+.icon{
+    border: 1px solid rgb(2, 51, 115);
+    height: 50px;
+    width: 50px;
+    margin: 10px auto;
+    border-radius: 50px;
+    text-align: center;
+    background: rgb(6,85,132);
+    background: linear-gradient(90deg, rgba(6,85,132,1) 0%, rgba(18,39,122,1) 36%, rgba(7,55,124,1) 91%); 
+}
+
+.icon i{
+    margin: 18px auto;
+    color: white;
+}
+
+.name{
+    margin: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text{
+   text-align: center;
+   margin: 15px;
+}
+
+
+
+/*
+    Quelques notes: Utilisation the before and after
+    => position absolute (it will be show)
+    => position relative (add display property)
+*/
+
+/* Resume card */
+
+.resume-item .title{
+    font-size: 15px;
+}
+
+#experience{
+    position: relative;
+    left: -75px;
+    width: 700px;
+    padding: 0px 50px 25px 50px;
+}
+
+#experience title{
+    margin: 0px;
+}
+
+#experience::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.resume-items{
+    width: 2000px;
+}
+
+.resume-item{
+    width: 315px;
+    margin: 5px 0px;
+   /*  float: left; */
+    display: inline-block;
+}
+
+.resume-item .date{
+    display: inline-block;
+    transform: rotate(90deg);
+    width: 50px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.resume-item .title{
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    left: -40px;
+    width: 100px;
+    text-align: start;
+}
+
+.resume-item .place{
+    position: relative;
+    top: -20px;
+    left: 40px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #8c8b8b;
+}
+
+.resume-item .info{
+   position: relative;
+   left: 40px;
+   top: -15px;
+   width: 250px;
+   font-size: 13px;
+   text-align: start;
+}
+
+#education{
+    position: relative;
+    left: -75px;
+    width: 700px;
+    padding: 0px 50px 25px 50px;
+    margin-top: 5px;
+}
+
+#education::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.navs{
+    position: absolute;
+    left: 575px;
+    top:-30px
+}
+
+.navs span{
+    border: 1px solid grey;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
+.navs span.prev::after{
+    content: "";
+    position: relative;
+    left:26px;
+    top:-30px;
+    display: inline-block;
+    height: 0.5px;
+    width: 14.5px;
+    background-color: #8c8b8b;
+}
+
+.navs span.next::after{
+    content: "";
+    position: relative;
+    left:36px;
+    top:-30px;
+    display: inline-block;
+    height: 0.5px;
+    width: 55px;
+    background-color: #8c8b8b;
+}
+
+.navs span i{
+    font-size: 15px;
+    margin: 10px;
+}
+
+.item-left{
+    animation: slideItem_left 1s ease-out forwards;
+}
+
+.item-right{
+    animation: slideItem_right 1s ease-out forwards;
+}
+
+
 
 
 

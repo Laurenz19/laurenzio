@@ -12,7 +12,6 @@ $('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li
 
 $('.top-menu').find('li').click(function(){
     let name = $(this).attr('name')
-   
     $('.top-menu').find('li').css({
         "color": "rgb(7, 36, 59)"
     })
@@ -23,15 +22,20 @@ $('.top-menu').find('li').click(function(){
     showCard(name);
 })
 
+
 if(browserName == "Chrome"){
-   $(`#container`).css({
+    $(`#container`).css({
         "position":"absolute",
         "top":"-25px",
-        "left":"0px"
+        "left":"55px"
         
     })
     $(`#home-card`).css({
-        "height": "550px"
+        "height": "550px" 
+    })
+
+    $(`.card-content`).css({
+        "max-height": "525px"
         
     })
     menu.forEach(element => {
@@ -66,3 +70,29 @@ $('#button').find('span:nth-child(2)').click(function(){
 
     showCard("contact-card");
  })
+
+ /* Resume card */
+ $('#experience').find('span').click(function(){
+     let type = $(this).attr('class');
+     let resume_items = $('#experience').find('div.resume-items');
+    
+     slideResume(resume_items, type)
+ })
+
+ $('#education').find('span').click(function(){
+    let type = $(this).attr('class');
+    let resume_items = $('#education').find('div.resume-items');
+     
+    slideResume(resume_items, type)
+})
+
+function slideResume(item, type){
+    item.removeClass('item-left')
+    item.removeClass('item-right')
+   
+    if(type == 'prev'){
+       item.addClass('item-left')
+    }else{
+       item.addClass('item-right')
+    }
+}

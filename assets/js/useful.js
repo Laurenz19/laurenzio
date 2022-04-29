@@ -1,15 +1,15 @@
 export let menu = [
     "about-card", "resume-card", "works-card","contact-card"
 ]
-export let current = menu[0]
+export let current =  menu[0]
 
 function hide(name, state){
     console.log(state)
     if(state == true){
-       
         $(`#${name}`).css({
             "display": "none"
         })
+         
     }else{
         $(`#${name}`).css({
             "display": "inline-block"
@@ -18,20 +18,18 @@ function hide(name, state){
 }
 
 function transition(name){
-   
+    
     if(name != current){
-        $(`#${current}`).addClass('slideOut')
-        $(`#${name}`).addClass('slideIn')
+        let old = current;
+        current = name
+        $(`#${old}`).addClass('slideOut')
+        $(`#${current}`).addClass('slideIn')
 
         setTimeout(()=>{
-            menu.forEach(elem_name => {
-                if(elem_name == current){
-                    hide(elem_name, true)
-                } 
-            });
-            $(`#${current}`).removeClass('slideOut')
-            $(`#${name}`).removeClass('slideIn')
-            current = name
+           
+            hide(old, true)
+            $(`#${old}`).removeClass('slideOut')
+            $(`#${current}`).removeClass('slideIn')
         },1000)
     }
 }
