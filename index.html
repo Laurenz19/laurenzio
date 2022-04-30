@@ -26,6 +26,9 @@
     <script src="./assets/plugins/jquery/jquery.3.2.1.min.js"></script>
     <script src="./assets/plugins/jquery/jQuery.Keyframes-master/dist/jquery.keyframes.min.js"></script>
 
+    <!-- replace x.x.x with actual version -->
+    <script src="https://unpkg.com/@codersrank/summary@x.x.x/codersrank-summary.min.js"></script>
+    
     <script type="module" src="./assets/js/main.js"></script>
 </head>
 <body> 
@@ -236,70 +239,13 @@
             <hr>
             <div class="content">
                 <div id="skills">
-                    <!-- <div class="skill-item">
-                        <div class="outer">
-                            <div class="inner">
-                                <div class="number">
-                                    90%
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                            <defs>
-                               <linearGradient id="GradientColor">
-                                  <stop offset="0%" stop-color="rgb(4, 34, 113)" />
-                                  <stop offset="100%" stop-color="rgb(5, 42, 75)" />
-                               </linearGradient>
-                            </defs>
-                            <circle cx="80" cy="80" r="38" stroke-linecap="round" />
-                        </svg>
-                        
-                        <div class="skill-name">HTML & CSS</div>
-                        <div class="skill-text">
-                            As I want to be a web integrator, this skill is really important. 
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="outer">
-                            <div class="inner">
-                                <div class="number">
-                                    70%
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                            <circle cx="80" cy="80" r="38" stroke-linecap="round" />
-                        </svg>
-                        
-                        <div class="skill-name">Javascript</div>
-                        <div class="skill-text">
-                            I know a little bit about its frameworks such as Jquery and Vue.js.
-                        </div>
-                    </div>
-
-                    <div class="skill-item">
-                        <div class="outer">
-                            <div class="inner">
-                                <div class="number">
-                                    75%
-                                </div>
-                            </div>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
-                            <circle cx="80" cy="80" r="38" stroke-linecap="round" />
-                        </svg>
-                        
-                        <div class="skill-name">Server Side</div>
-                        <div class="skill-text">
-                            As back-end technology, I use node.js and also a php framework like Symfony.
-                        </div>
-                    </div> -->
-
                     <script id="all-skills-template" type="text/template">
                         {{skills}}
                     </script>
                 </div>
+                <codersrank-summary username="laurenz19"></codersrank-summary>
+                <div id="hide_codersrank"></div>
+                <img src="https://ghchart.rshah.org/Laurenz19" alt="my Github chart"  class="github_chart"/>
             </div>
         </div>
        

@@ -884,6 +884,29 @@ svg{
     }
 }
 
+codersrank-summary {
+    margin: 25px 0px;
+    --header-bg-color: rgba(2,12,54,1);
+    --name-font-size: 12px;
+    --avatar-size : 50px
+}
+
+#hide_codersrank{
+    width: 600px;
+    background-color: white;
+    position: relative;
+    top: -40px;
+    height: 20px;
+    z-index: 200;
+}
+
+.github_chart{
+    width: 580px;
+    position: relative;
+    left: -10px;
+    top: -15px;
+}
+
 
 
 
