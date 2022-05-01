@@ -1,4 +1,4 @@
-import {showCard, browserName, menu, current} from './useful.js';
+import { showCard, browserName, menu, current } from './useful.js';
 
 
 /* Background */
@@ -6,37 +6,37 @@ $('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li
 
 /* Header & menu */
 
- $('.top-menu').find('li:first').css({
-    "color":"rgb(4, 34, 113)"
- })
+$('.top-menu').find('li:first').css({
+    "color": "rgb(4, 34, 113)"
+})
 
-$('.top-menu').find('li').click(function(){
+$('.top-menu').find('li').click(function() {
     let name = $(this).attr('name')
     $('.top-menu').find('li').css({
         "color": "rgb(7, 36, 59)"
     })
 
     $(this).css({
-        "color":"rgb(4, 34, 113)"
+        "color": "rgb(4, 34, 113)"
     })
     showCard(name);
 })
 
 
-if(browserName == "Chrome"){
+if (browserName == "Chrome") {
     $(`#container`).css({
-        "position":"absolute",
-        "top":"-25px",
-        "left":"55px"
-        
+        "position": "absolute",
+        "top": "-25px",
+        "left": "55px"
+
     })
     $(`#home-card`).css({
-        "height": "550px" 
+        "height": "550px"
     })
 
     $(`.card-content`).css({
         "max-height": "525px"
-        
+
     })
     menu.forEach(element => {
         $(`#${element}`).css({
@@ -44,56 +44,56 @@ if(browserName == "Chrome"){
             "width": "685px",
             "display": "none",
             "position": "absolute",
-            "top":"102px",
+            "top": "102px",
             "left": "638px",
             "border-radius": "3px",
             "background-color": "white"
         })
-        if(element == current){
+        if (element == current) {
             $(`#${element}`).css({
                 "display": "inline-block",
             })
         }
-        
+
     });
 }
 
 /* Home card */
-$('#button').find('span:nth-child(2)').click(function(){
+$('#button').find('span:nth-child(2)').click(function() {
     $('.top-menu').find(`li[name="${current}"]`).css({
         "color": "rgb(7, 36, 59)"
     })
-    
+
     $('.top-menu').find('li[name="contact-card"]').css({
-        "color":"rgb(4, 34, 113)"
+        "color": "rgb(4, 34, 113)"
     })
 
     showCard("contact-card");
- })
+})
 
- /* Resume card */
- $('#experience').find('span').click(function(){
-     let type = $(this).attr('class');
-     let resume_items = $('#experience').find('div.resume-items');
-    
-     slideResume(resume_items, type)
- })
-
- $('#education').find('span').click(function(){
+/* Resume card */
+$('#experience').find('span').click(function() {
     let type = $(this).attr('class');
-    let resume_items = $('#education').find('div.resume-items');
-     
+    let resume_items = $('#experience').find('div.resume-items');
+
     slideResume(resume_items, type)
 })
 
-function slideResume(item, type){
+$('#education').find('span').click(function() {
+    let type = $(this).attr('class');
+    let resume_items = $('#education').find('div.resume-items');
+
+    slideResume(resume_items, type)
+})
+
+function slideResume(item, type) {
     item.removeClass('item-left')
     item.removeClass('item-right')
-   
-    if(type == 'next'){
-       item.addClass('item-left')
-    }else{
-       item.addClass('item-right')
+
+    if (type == 'next') {
+        item.addClass('item-left')
+    } else {
+        item.addClass('item-right')
     }
 }
 
@@ -101,51 +101,51 @@ function slideResume(item, type){
 let skills_template = $("#all-skills-template")
 let skills_template_html = skills_template.html()
 let skills = ''
-let data = [
-    {
-        name: "HTML & CSS", 
+let data = [{
+        name: "HTML & CSS",
         value: 80,
         text: "As I want to be a web integrator, this skill is really important.",
     },
     {
-        name: "JavaScript", 
+        name: "JavaScript",
         value: 70,
         text: "I know a little bit about its frameworks such as Jquery and Vue.js.",
     },
     {
-        name: "Server Side", 
+        name: "Server Side",
         value: 75,
         text: " As back-end technology, I use node.js and also a php framework like Symfony.",
     }
 ]
 
 renderSkills(data)
-function renderSkills(data){
+
+function renderSkills(data) {
     skills = ""
-    let all_skills =''
+    let all_skills = ''
     let custom_class = []
     for (let i = 0; i < data.length; i++) {
-      
-        all_skills += '<div class="skill-item">'+
-        '<div class="outer">' +
+
+        all_skills += '<div class="skill-item">' +
+            '<div class="outer">' +
             '<div class="inner">' +
-                `<div class="number">${data[i].value}%</div>`+
-            '</div>'+
-        '</div>'+
-        '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">'+
-            '<defs>'+
-                '<linearGradient id="GradientColor">'+
-                '<stop offset="0%" stop-color="rgb(4, 34, 113)" /><stop offset="100%" stop-color="rgb(5, 42, 75)" />'+
-                '</linearGradient>'+
-            '</defs>'+
-            `<circle class="skill${i}" cx="80" cy="80" r="38" stroke-linecap="round" />`+
-        '</svg>'+
-        `<div class="skill-name">${data[i].name}</div>`+
-        '<div class="skill-text">'+
-            `${data[i].text}`+ 
-        '</div>'+
-    '</div>' 
-       custom_class.push({value: data[i].value, name: `.skill${i}`})
+            `<div class="number">${data[i].value}%</div>` +
+            '</div>' +
+            '</div>' +
+            '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">' +
+            '<defs>' +
+            '<linearGradient id="GradientColor">' +
+            '<stop offset="0%" stop-color="rgb(4, 34, 113)" /><stop offset="100%" stop-color="rgb(5, 42, 75)" />' +
+            '</linearGradient>' +
+            '</defs>' +
+            `<circle class="skill${i}" cx="80" cy="80" r="38" stroke-linecap="round" />` +
+            '</svg>' +
+            `<div class="skill-name">${data[i].name}</div>` +
+            '<div class="skill-text">' +
+            `${data[i].text}` +
+            '</div>' +
+            '</div>'
+        custom_class.push({ value: data[i].value, name: `.skill${i}` })
     }
 
 
@@ -153,32 +153,109 @@ function renderSkills(data){
     $("#skills").html(skills)
 
     for (let i = 0; i < custom_class.length; i++) {
-        console.log(300*custom_class[i].value/100)
+        console.log(300 * custom_class[i].value / 100)
         $(custom_class[i].name).css({
-            "stroke-dasharray": 235*custom_class[i].value/100
+            "stroke-dasharray": 235 * custom_class[i].value / 100
         })
     }
-    
+
 }
 
 /* Custom Cursor */
-$(document).on("mousemove", function(e){
-  $('.cursor').css({
-      "top":`${e.pageY-15}px`,
-      "left":`${e.pageX-15}px`
-  })
-})
-
-$('.top-menu').find('li').hover(function(){
-  
+$(document).on("mousemove", function(e) {
     $('.cursor').css({
-        "transform":"scale(2)"
+        "top": `${e.pageY-15}px`,
+        "left": `${e.pageX-15}px`
     })
 })
 
-$('.top-menu').find('li').mouseleave(function(){
+$('.top-menu').find('li').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(2)"
+    })
+})
+
+$('.top-menu').find('li').mouseleave(function() {
     console.log('hello')
     $('.cursor').css({
-        "transform":"scale(1)"
+        "transform": "scale(1)"
+    })
+})
+
+$('#myself').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(2)",
+        "background": "rgba(255, 255, 255, 0.342)"
+    })
+})
+
+$('#myself').mouseleave(function() {
+    console.log('hello')
+    $('.cursor').css({
+        "transform": "scale(1)",
+        "background": "rgba(81, 0, 233, 0.342)"
+    })
+})
+
+$('.prev').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(1.5)"
+    })
+})
+
+$('.prev').mouseleave(function() {
+    console.log('hello')
+    $('.cursor').css({
+        "transform": "scale(1)"
+    })
+})
+
+
+
+$('.next').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(1.5)"
+    })
+})
+
+$('.next').mouseleave(function() {
+    console.log('hello')
+    $('.cursor').css({
+        "transform": "scale(1)"
+    })
+})
+
+$('#mySocial').find('li').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(1.5)",
+        "background": "rgba(255, 255, 255, 0.342)"
+    })
+})
+
+$('#mySocial').find('li').mouseleave(function() {
+    console.log('hello')
+    $('.cursor').css({
+        "transform": "scale(1)",
+        "background": "rgba(81, 0, 233, 0.342)"
+    })
+})
+
+
+$('#button').find('span').hover(function() {
+
+    $('.cursor').css({
+        "transform": "scale(2)",
+    })
+})
+
+$('#button').find('span').mouseleave(function() {
+    console.log('hello')
+    $('.cursor').css({
+        "transform": "scale(1)",
     })
 })

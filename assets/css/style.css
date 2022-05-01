@@ -1,146 +1,147 @@
-body{
-      overflow: hidden;
-      background: rgb(5,2,36);
-      background: linear-gradient(90deg, rgba(5,2,36,1) 0%, rgba(2,12,54,1) 36%, rgba(2,29,39,1) 91%); 
-      /* font-family: 'Signika Negative', sans-serif; */
-      font-family:sans-serif;
-      --position: 0
+body {
+    overflow: hidden;
+    background: rgb(5, 2, 36);
+    background: linear-gradient(90deg, rgba(5, 2, 36, 1) 0%, rgba(2, 12, 54, 1) 36%, rgba(2, 29, 39, 1) 91%);
+    /* font-family: 'Signika Negative', sans-serif; */
+    font-family: sans-serif;
+    --position: 0
 }
 
-/**** Animation ****/
-@keyframes animate {
 
-    0%{
+/**** Animation ****/
+
+@keyframes animate {
+    0% {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
-
-    100%{
+    100% {
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
         border-radius: 50%;
     }
-
 }
 
-@keyframes card_slideIn{
-    from{ 
+@keyframes card_slideIn {
+    from {
         transform: translateX(-400px);
         opacity: 0;
-     }
-    to{
+    }
+    to {
         transform: translateX(0px);
         opacity: 1;
-     }
+    }
 }
 
 @keyframes card_slideOut {
-    from{ 
+    from {
         transform: translateX(0px);
         opacity: 1;
-     }
-    to{
+    }
+    to {
         transform: translateX(-400px);
         opacity: 0;
-     }
+    }
 }
 
-
 @keyframes slideItem_left {
-    from{
+    from {
         transform: translateX(var(--position));
     }
-    to{
+    to {
         transform: translateX(-315px);
     }
-
 }
 
 @keyframes slideItem_right {
-    from{
+    from {
         transform: translateX(-315px);
     }
-    to{ 
+    to {
         transform: translateX(var(--position));
     }
 }
 
-#myself{
+#myself {
     position: relative;
-    top:15px;
+    top: 15px;
     left: 50px;
-    font-family:'Trebuchet MS', sans-serif;
-  /*  font-family: 'Square Peg', cursive; */
+    font-family: 'Trebuchet MS', sans-serif;
+    /*  font-family: 'Square Peg', cursive; */
     font-weight: bold;
     font-size: 15px;
     color: rgb(226, 223, 223);
+    width: 150px
 }
 
-#myself span{
+#myself span {
     color: #55708b;
     font-size: 17px;
 }
 
-#mySocial{
+#mySocial {
     position: relative;
-    left:1450px;
-    top:400px;
+    left: 1450px;
+    top: 400px;
     color: rgb(226, 223, 223);
 }
 
-
-#mySocial span{
+#mySocial span {
     position: absolute;
-    left:13px;
+    left: 13px;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     font-size: 13px;
     font-weight: 600;
-   /*  font-family: 'Square Peg', cursive; */
+    /*  font-family: 'Square Peg', cursive; */
 }
 
-#mySocial span::after{
-   content: "";
-   position: absolute;
-   display: block;
-   right: -30px;
-   top: -11px;
-   width: 1px;
-   height: 40px;
-   transform: rotate(90deg);
+#mySocial span::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -30px;
+    top: -11px;
+    width: 1px;
+    height: 40px;
+    transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
-   background-color: rgb(226, 223, 223);
+    background-color: rgb(226, 223, 223);
 }
 
-#mySocial ul{
-  position: relative;
-  top:100px;
-  left:-3px
+#mySocial ul {
+    position: relative;
+    top: 100px;
+    left: -3px
 }
 
-#mySocial li, #myContact li{
+#mySocial li,
+#myContact li {
     list-style: none;
     margin: 5px 0px;
 }
 
-#mySocial li i{
+#mySocial li i {
     color: rgb(226, 223, 223);
     font-size: 13px;
 }
 
-#myContact{
+#myContact {
     position: absolute;
     left: 15px;
-    top:590px;
+    top: 590px;
     color: rgb(226, 223, 223);
     font-size: 11px;
 }
 
+
 /***** Container *****/
 
+
 /*Background*/
-.circles{
+
+.circles {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,7 +149,7 @@ body{
     height: 100%;
 }
 
-.circles li{
+.circles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -156,18 +157,17 @@ body{
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;  
+    bottom: -150px;
 }
 
-.circles li:nth-child(1){
+.circles li:nth-child(1) {
     left: 25%;
     width: 80px;
     height: 80px;
     animation-delay: 0s;
 }
 
-
-.circles li:nth-child(2){
+.circles li:nth-child(2) {
     left: 10%;
     width: 20px;
     height: 20px;
@@ -175,14 +175,14 @@ body{
     animation-duration: 12s;
 }
 
-.circles li:nth-child(3){
+.circles li:nth-child(3) {
     left: 70%;
     width: 20px;
     height: 20px;
     animation-delay: 4s;
 }
 
-.circles li:nth-child(4){
+.circles li:nth-child(4) {
     left: 40%;
     width: 60px;
     height: 60px;
@@ -190,28 +190,28 @@ body{
     animation-duration: 18s;
 }
 
-.circles li:nth-child(5){
+.circles li:nth-child(5) {
     left: 65%;
     width: 20px;
     height: 20px;
     animation-delay: 0s;
 }
 
-.circles li:nth-child(6){
+.circles li:nth-child(6) {
     left: 75%;
     width: 110px;
     height: 110px;
     animation-delay: 3s;
 }
 
-.circles li:nth-child(7){
+.circles li:nth-child(7) {
     left: 35%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
 }
 
-.circles li:nth-child(8){
+.circles li:nth-child(8) {
     left: 50%;
     width: 25px;
     height: 25px;
@@ -219,7 +219,7 @@ body{
     animation-duration: 45s;
 }
 
-.circles li:nth-child(9){
+.circles li:nth-child(9) {
     left: 20%;
     width: 15px;
     height: 15px;
@@ -227,7 +227,7 @@ body{
     animation-duration: 35s;
 }
 
-.circles li:nth-child(10){
+.circles li:nth-child(10) {
     left: 85%;
     width: 150px;
     height: 150px;
@@ -237,8 +237,9 @@ body{
 
 
 /*Menu*/
-div#container{
-    margin:50px auto 0 auto;
+
+div#container {
+    margin: 50px auto 0 auto;
     width: 1300px;
     position: absolute;
     top: -50px;
@@ -246,16 +247,16 @@ div#container{
     z-index: 1;
 }
 
-header{
+header {
     display: inline-block;
     position: absolute;
-    top:100px;
+    top: 100px;
     left: 25px;
     z-index: 1;
     color: rgb(7, 36, 59);
 }
 
-header li{
+header li {
     list-style: none;
     background-color: white;
     width: 75px;
@@ -263,92 +264,102 @@ header li{
     text-transform: uppercase;
     height: 70px;
     cursor: pointer;
-
 }
 
-header li span{
-   display: block;
-   font-size: 10px;
-   font-weight: bold;
-   margin: 5px;
+header li span {
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 5px;
 }
 
-header li div{
-   position: relative;
-   top:15px
+header li div {
+    position: relative;
+    top: 15px
 }
 
-header li:hover{
+header li:hover {
     /* color:rgb(4, 34, 113) */
     color: rgb(2, 57, 80);
 }
 
-ul.principal > li:first-child{
+ul.principal>li:first-child {
     margin-bottom: 7px;
     border-radius: 3px;
     position: relative;
     left: 40px;
 }
 
-ul.principal > li:first-child i{
+ul.principal>li:first-child i {
     font-size: 25px;
     position: relative;
     top: 20px;
 }
 
-ul.top-menu li{
-   border-bottom: 1px solid rgb(234, 233, 233);
+ul.top-menu li {
+    border-bottom: 1px solid rgb(234, 233, 233);
 }
 
-ul.top-menu li:first-child{
+ul.top-menu li:first-child {
     border-radius: 3px 3px 0px 0px;
 }
-ul.top-menu li:last-child{
+
+ul.top-menu li:last-child {
     border-radius: 0px 0px 3px 3px;
     border-bottom: none;
 }
 
+
 /*Home card*/
-div#home-card{
+
+div#home-card {
     background-color: white;
     height: 580px;
     width: 450px;
     border-radius: 3px;
     display: inline-block;
     position: absolute;
-    top:90px;
-    left:190px;
+    top: 90px;
+    left: 190px;
     z-index: 1;
     box-shadow: -10px -15px rgba(31, 132, 132, 0.3), 19px -1px 25px -3px rgba(119, 117, 117, 0.2);
 }
 
+
 /*other cards*/
-#about-card, #resume-card, #works-card, #contact-card{
+
+#about-card,
+#resume-card,
+#works-card,
+#contact-card {
     width: 685px;
     height: 555px;
     display: inline-block;
     position: absolute;
-    top:103px;
+    top: 103px;
     left: 638px;
     border-radius: 3px;
     background-color: white;
 }
 
-.slideIn{
+.slideIn {
     animation: card_slideIn 0.7s ease-out forwards;
 }
 
-.slideOut{
+.slideOut {
     animation: card_slideOut 0.7s ease-out forwards;
 }
 
+
 /*Home Card*/
-.profile{
+
+.profile {
     overflow: hidden;
     position: relative;
     height: inherit;
 }
-#picture{
+
+#picture {
     background-image: url("../../images/laurenzio.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -356,29 +367,29 @@ div#home-card{
     border-radius: 3px;
 }
 
-div#picture::before{
+div#picture::before {
     content: "";
     height: 100px;
     width: 300px;
     background: white;
     position: absolute;
     transform: rotate(10deg);
-    top:275px;
-    left:-25px
+    top: 275px;
+    left: -25px
 }
 
-div#picture::after{
+div#picture::after {
     content: "";
     height: 100px;
     width: 300px;
     background: white;
     position: absolute;
     transform: rotate(-10deg);
-    top:275px;
-    left:195px
+    top: 275px;
+    left: 195px
 }
 
-div#name{
+div#name {
     position: absolute;
     display: block;
     top: 315px;
@@ -390,7 +401,7 @@ div#name{
     color: rgb(2, 57, 80);
 }
 
-div#title{
+div#title {
     position: absolute;
     top: 370px;
     margin: 0 auto;
@@ -401,15 +412,15 @@ div#title{
     color: rgb(2, 51, 115);
 }
 
-div.titles{
-   width: 50%;
+div.titles {
+    width: 50%;
 }
 
-.typed-cursor{
+.typed-cursor {
     display: none;
 }
 
-div#social{
+div#social {
     position: absolute;
     top: 400px;
     margin: 0 auto;
@@ -417,45 +428,44 @@ div#social{
     text-align: center;
 }
 
-#social ul{
+#social ul {
     padding: 0px;
 }
 
-#social li{
+#social li {
     list-style: none;
     display: inline-block;
     font-size: 15px;
     margin: 5px;
 }
 
-#social i:hover{
+#social i:hover {
     color: rgb(95, 6, 173)
 }
 
-#social i{
+#social i {
     color: rgb(2, 57, 80);
 }
 
-#button{
+#button {
     position: absolute;
     top: 510px;
     width: 100%;
     text-align: center
 }
 
-#button::before{
-   content: "";
-   position: absolute;
-   left: 5%;
-   top: -15px;
-   margin: 0 auto;
-   height: 2px;
-   width: 90%;
-   border-top: 1px solid rgb(207, 199, 199);
-   
+#button::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: -15px;
+    margin: 0 auto;
+    height: 2px;
+    width: 90%;
+    border-top: 1px solid rgb(207, 199, 199);
 }
 
-#button span{
+#button span {
     margin: 50px;
     cursor: pointer;
     text-transform: uppercase;
@@ -463,11 +473,11 @@ div#social{
     font-weight: bold;
 }
 
-#button span:hover{
-    color:rgb(95, 6, 173)
+#button span:hover {
+    color: rgb(95, 6, 173)
 }
 
-#button span:nth-child(1)::before{
+#button span:nth-child(1)::before {
     content: "";
     position: absolute;
     border-left: 1px solid rgb(207, 199, 199);
@@ -476,46 +486,48 @@ div#social{
     left: 230px
 }
 
-/* About Card */
-div.card-content{
-    margin:0px 2px 5px 5px;
-    max-height: 553px;
-    overflow-y:auto;
-    overflow-x:hidden;
 
+/* About Card */
+
+div.card-content {
+    margin: 0px 2px 5px 5px;
+    max-height: 553px;
+    overflow-y: auto;
+    overflow-x: hidden;
     /* for firefox */
     scrollbar-width: thin;
-    scrollbar-face-color: rgb(81, 89, 109); /* Firefox 63 compatibility */
-    scrollbar-track-color: rgb(241, 244, 244); /* Firefox 63 compatibility */
+    scrollbar-face-color: rgb(81, 89, 109);
+    /* Firefox 63 compatibility */
+    scrollbar-track-color: rgb(241, 244, 244);
+    /* Firefox 63 compatibility */
     scrollbar-color: rgb(81, 89, 109) rgb(241, 244, 244);
 }
 
-div.card-content::-webkit-scrollbar{
-   width: 8px;
+div.card-content::-webkit-scrollbar {
+    width: 8px;
 }
 
-div.card-content::-webkit-scrollbar-track{
-    background-color:rgb(241, 244, 244);
+div.card-content::-webkit-scrollbar-track {
+    background-color: rgb(241, 244, 244);
 }
 
-div.card-content::-webkit-scrollbar-thumb{
-    background-color:rgb(81, 89, 109);
+div.card-content::-webkit-scrollbar-thumb {
+    background-color: rgb(81, 89, 109);
     border-radius: 10px;
 }
 
-
-div.title{
+div.title {
     font-size: 20px;
     font-weight: bold;
     margin: 20px 25px;
     color: rgb(5, 42, 58);
 }
 
-div.title span{
+div.title span {
     color: rgb(4, 34, 113);
 }
 
-div.title span::before{
+div.title span::before {
     content: "";
     position: relative;
     display: inline-block;
@@ -527,20 +539,20 @@ div.title span::before{
     border-radius: 26px;
 }
 
-div.card-content hr{
+div.card-content hr {
     width: 85%;
     position: relative;
     top: -5px;
     left: -25px;
-    border: 0; 
-    height: 1px; 
+    border: 0;
+    height: 1px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
-div.content{
+div.content {
     text-align: justify;
     margin: 30px 50px;
     color: rgb(66, 73, 75);
@@ -548,15 +560,15 @@ div.content{
     font-size: 15px;
 }
 
-.cols span{
+.cols span {
     color: rgb(4, 34, 113);
 }
 
 .cols {
-   font-size: 14px;
+    font-size: 14px;
 }
 
-div#service-items{
+div#service-items {
     color: rgb(40, 50, 54);
     font-family: sans-serif;
     font-size: 15px;
@@ -566,21 +578,21 @@ div#service-items{
 div#info-list {
     position: relative;
     left: -12px;
-    width: 620px;   
-    color: rgb(60, 79, 86); 
+    width: 620px;
+    color: rgb(60, 79, 86);
 }
 
-div#info-list ul{
-   padding: 0px;
+div#info-list ul {
+    padding: 0px;
 }
 
-div#info-list ul::after{
-   content: "";
-   clear: both;
-   display: block;
- }
+div#info-list ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
 
-div#info-list li{
+div#info-list li {
     list-style: none;
     display: inline-block;
     margin: 0px 26px;
@@ -588,79 +600,78 @@ div#info-list li{
     text-align: start;
 }
 
-div#info-list label{
-   /* color: rgb(2, 51, 115); */
-   font-weight: bold;
+div#info-list label {
+    /* color: rgb(2, 51, 115); */
+    font-weight: bold;
 }
 
-#about-card content{
+#about-card content {
     font-size: 14px;
 }
 
-div#info-list li:nth-child(odd){
+div#info-list li:nth-child(odd) {
     width: 40%;
 }
 
-div#info-list li:nth-child(even){
+div#info-list li:nth-child(even) {
     float: left;
     width: 40%;
 }
 
-.service-item .name{
+.service-item .name {
     text-align: center;
 }
 
-#quote{
+#quote {
     quotes: '“';
     text-align: center;
 }
 
-#quote blockquote{
-   font-size: 21px;
-   font-family: 'Dancing Script', cursive;
-   /* font-family: 'Square Peg', cursive; */
+#quote blockquote {
+    font-size: 21px;
+    font-family: 'Dancing Script', cursive;
+    /* font-family: 'Square Peg', cursive; */
 }
 
-#quote img{
+#quote img {
     margin: 0px auto;
     width: 40px;
     height: 40px;
     border-radius: 40px;
 }
 
-#quote #author-name{
+#quote #author-name {
     font-size: 11px;
     font-weight: bold;
     margin: 7px auto;
 }
 
-.icon{
+.icon {
     border: 1px solid rgb(2, 51, 115);
     height: 50px;
     width: 50px;
     margin: 10px auto;
     border-radius: 50px;
     text-align: center;
-    background: rgb(6,85,132);
-    background: linear-gradient(90deg, rgba(6,85,132,1) 0%, rgba(18,39,122,1) 36%, rgba(7,55,124,1) 91%); 
+    background: rgb(6, 85, 132);
+    background: linear-gradient(90deg, rgba(6, 85, 132, 1) 0%, rgba(18, 39, 122, 1) 36%, rgba(7, 55, 124, 1) 91%);
 }
 
-.icon i{
+.icon i {
     margin: 18px auto;
     color: white;
 }
 
-.name{
+.name {
     margin: 5px;
     font-weight: bold;
     font-size: 14px;
 }
 
-.text{
-   text-align: center;
-   margin: 15px;
+.text {
+    text-align: center;
+    margin: 15px;
 }
-
 
 
 /*
@@ -669,41 +680,42 @@ div#info-list li:nth-child(even){
     => position relative (add display property)
 */
 
+
 /* Resume card */
 
-.resume-item .title{
+.resume-item .title {
     font-size: 15px;
 }
 
-#experience{
+#experience {
     position: relative;
     left: -75px;
     width: 700px;
     padding: 0px 50px 25px 50px;
 }
 
-#experience title{
+#experience title {
     margin: 0px;
 }
 
-#experience::after{
+#experience::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.resume-items{
+.resume-items {
     width: 2000px;
 }
 
-.resume-item{
+.resume-item {
     width: 315px;
     margin: 5px 0px;
-   /*  float: left; */
+    /*  float: left; */
     display: inline-block;
 }
 
-.resume-item .date{
+.resume-item .date {
     display: inline-block;
     transform: rotate(90deg);
     width: 50px;
@@ -711,7 +723,7 @@ div#info-list li:nth-child(even){
     font-weight: bold;
 }
 
-.resume-item .title{
+.resume-item .title {
     display: inline-block;
     position: relative;
     top: -5px;
@@ -720,7 +732,7 @@ div#info-list li:nth-child(even){
     text-align: start;
 }
 
-.resume-item .place{
+.resume-item .place {
     position: relative;
     top: -20px;
     left: 40px;
@@ -729,16 +741,16 @@ div#info-list li:nth-child(even){
     color: #8c8b8b;
 }
 
-.resume-item .info{
-   position: relative;
-   left: 40px;
-   top: -15px;
-   width: 250px;
-   font-size: 13px;
-   text-align: start;
+.resume-item .info {
+    position: relative;
+    left: 40px;
+    top: -15px;
+    width: 250px;
+    font-size: 13px;
+    text-align: start;
 }
 
-#education{
+#education {
     position: relative;
     left: -75px;
     width: 700px;
@@ -746,19 +758,19 @@ div#info-list li:nth-child(even){
     margin-top: 5px;
 }
 
-#education::after{
+#education::after {
     content: "";
     display: block;
     clear: both;
 }
 
-.navs{
+.navs {
     position: absolute;
     left: 575px;
-    top:-30px
+    top: -30px
 }
 
-.navs span{
+.navs span {
     border: 1px solid grey;
     width: 35px;
     height: 35px;
@@ -768,68 +780,68 @@ div#info-list li:nth-child(even){
     margin: 5px;
 }
 
-.navs span.prev::after{
+.navs span.prev::after {
     content: "";
     position: relative;
-    left:26px;
-    top:-30px;
+    left: 26px;
+    top: -30px;
     display: inline-block;
     height: 0.5px;
     width: 14.5px;
     background-color: #8c8b8b;
 }
 
-.navs span.next::after{
+.navs span.next::after {
     content: "";
     position: relative;
-    left:36px;
-    top:-30px;
+    left: 36px;
+    top: -30px;
     display: inline-block;
     height: 0.5px;
     width: 55px;
     background-color: #8c8b8b;
 }
 
-.navs span i{
+.navs span i {
     font-size: 15px;
     margin: 10px;
 }
 
-.item-left{
+.item-left {
     animation: slideItem_left 1s ease-out forwards;
 }
 
-.item-right{
+.item-right {
     animation: slideItem_right 1s ease-out forwards;
 }
 
+
 /** Skills Content **/
 
-#skills{
-   margin: 40px 0;
+#skills {
+    margin: 40px 0;
 }
 
-.skill-item{
+.skill-item {
     width: 150px;
     height: 150px;
-   /*  background-color: #55708b; */
+    /*  background-color: #55708b; */
     position: relative;
     display: inline-block;
     margin: 0 15px;
 }
 
-.outer{
+.outer {
     width: 80px;
     height: 80px;
     margin: auto;
     /* border: 1px solid black;  */
     border-radius: 50px;
-    box-shadow: 3px 3px 10px -1px rgba(0,0,0,0.15),
-                -3px -3px 10px -1px rgba(255, 255, 255, 0.7);
-    padding: 3px;            
+    box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.15), -3px -3px 10px -1px rgba(255, 255, 255, 0.7);
+    padding: 3px;
 }
 
-.inner{
+.inner {
     width: 65px;
     height: 65px;
     display: flex;
@@ -837,23 +849,19 @@ div#info-list li:nth-child(even){
     justify-content: center;
     border-radius: 50px;
     position: relative;
-    top:6.5px;
+    top: 6.5px;
     left: 6.5px;
-    box-shadow: inset 4px 4px 3px -1px rgba(0,0,0,0.2),
-                inset -4px -4px 3px -1px rgba(255, 255, 255, 0.7),
-                -0.5px -0.5px 0px rgba(255, 255,255,1),
-                0.5px 0.5px 0px rgba(0,0,0,0.15),
-                0px 12px 10px -10px rgba(0,0,0,0.05);
+    box-shadow: inset 4px 4px 3px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 3px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
 
-.skill-item .skill-name{
+.skill-item .skill-name {
     text-align: center;
     font-size: 12px;
     font-weight: bold;
     margin: 5px;
 }
 
-.skill-text{
+.skill-text {
     font-size: 10px;
     font-weight: 600;
     padding: 5px;
@@ -862,13 +870,13 @@ div#info-list li:nth-child(even){
     color: rgb(100, 100, 100);
 }
 
-.number{
-   font-size: 12px;
-   font-weight: 600;
-   color: #555;
+.number {
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
 }
 
-circle{
+circle {
     fill: none;
     stroke: url(#GradientColor);
     stroke-width: 11px;
@@ -876,14 +884,14 @@ circle{
     animation: anim 10s ease-out forwards;
 }
 
-svg{
+svg {
     position: absolute;
-    top:-38px;
+    top: -38px;
     left: -5px;
 }
 
 @keyframes anim {
-    0%{
+    0% {
         stroke-dasharray: 0;
     }
 }
@@ -893,12 +901,12 @@ codersrank-summary {
     --header-bg-color: white;
     --header-text-color: rgb(100, 100, 100);
     --name-font-size: 13px;
-    --avatar-size : 50px;
+    --avatar-size: 50px;
     --badge-box-shadow: 0px 2px 6px rgba(23, 36, 50, 0.3);
-    --badge-rank-font-size: 12px; 
+    --badge-rank-font-size: 12px;
 }
 
-#hide_codersrank{
+#hide_codersrank {
     width: 600px;
     background-color: white;
     position: relative;
@@ -907,7 +915,7 @@ codersrank-summary {
     z-index: 200;
 }
 
-.github_chart{
+.github_chart {
     width: 580px;
     position: relative;
     left: -10px;
@@ -928,13 +936,14 @@ To do list:
     9- Responsive 
 */
 
+
 /* Custom cursor */
 
-.cursor{
+.cursor {
     display: inline-block;
     width: 35px;
     height: 35px;
-    background: rgba(55, 30, 103, 0.9);
+    background: rgba(81, 0, 233, 0.342);
     border-radius: 50%;
     position: fixed;
     top: 0px;
@@ -947,18 +956,3 @@ To do list:
 #myself:hover {
     cursor: pointer;
 }
-
-#myself:hover + .cursor{
-   transform: scale(2);
-}
-
-
-
-
-
-
-
-
-
-
-
