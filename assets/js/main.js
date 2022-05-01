@@ -160,3 +160,25 @@ function renderSkills(data){
     }
     
 }
+
+/* Custom Cursor */
+$(document).on("mousemove", function(e){
+  $('.cursor').css({
+      "top":`${e.pageY-15}px`,
+      "left":`${e.pageX-15}px`
+  })
+})
+
+$('.top-menu').find('li').hover(function(){
+  
+    $('.cursor').css({
+        "transform":"scale(2)"
+    })
+})
+
+$('.top-menu').find('li').mouseleave(function(){
+    console.log('hello')
+    $('.cursor').css({
+        "transform":"scale(1)"
+    })
+})

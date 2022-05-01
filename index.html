@@ -34,6 +34,8 @@
 <body> 
     <div id="background"></div>
     <div id="myself"> <span>Sambany</span> Laurenzio</div>
+
+    <div class="cursor"></div>
     
     <div id="container">
      <header>
@@ -244,7 +246,14 @@
                     </script>
                 </div>
                 <codersrank-summary username="laurenz19"></codersrank-summary>
-                <div id="hide_codersrank"></div>
+                <div id="hide_codersrank">
+                    <defs>
+                        <linearGradient id="codersrank_bg">
+                            <stop offset="0%" stop-color="rgb(4, 34, 113)" />
+                            <stop offset="100%" stop-color="rgb(5, 42, 75)" />
+                        </linearGradient>
+                    </defs>
+                </div>
                 <img src="https://ghchart.rshah.org/Laurenz19" alt="my Github chart"  class="github_chart"/>
             </div>
         </div>
@@ -300,4 +309,5 @@
     loop:true
   });
 </script>
+
 </html>
