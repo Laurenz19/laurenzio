@@ -104,7 +104,7 @@ let skills = ''
 let data = [{
         name: "HTML & CSS",
         value: 80,
-        text: "As I want to be a web integrator, this skill is really important.",
+        text: "As I want to be a web integrator, this skill is really important for me.",
     },
     {
         name: "JavaScript",
@@ -183,7 +183,7 @@ $('.top-menu').find('li').mouseleave(function() {
     })
 })
 
-$('#myself').hover(function() {
+$('.self-content').hover(function() {
 
     $('.cursor').css({
         "transform": "scale(2)",
@@ -191,7 +191,7 @@ $('#myself').hover(function() {
     })
 })
 
-$('#myself').mouseleave(function() {
+$('.self-content').mouseleave(function() {
     console.log('hello')
     $('.cursor').css({
         "transform": "scale(1)",

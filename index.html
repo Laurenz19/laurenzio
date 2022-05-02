@@ -36,8 +36,11 @@
 <body>
     <div id="background"></div>
     <div id="myself">
-        <div><span>Sambany</span> Laurenzio</div>
-        <div><span>Download</span> My CV</div>
+        <div class="self-content">
+            <div class="self"><span>Sambany</span> Laurenzio</div>
+            <div class="self"><span>Download</span> CV</div>
+        </div>
+        
     </div>
 
     <div class="cursor"></div>
@@ -254,7 +257,7 @@
                                 </linearGradient>
                             </defs>
                         </div>
-                        <img src="https://ghchart.rshah.org/Laurenz19" alt="my Github chart" class="github_chart" />
+                        <img src="https://ghchart.rshah.org/laurenz19" alt="my Github chart" class="github_chart" />
                     </div>
                 </div>
 
@@ -274,7 +277,58 @@
                     <div class="title"><span>Get</span> in Touch</div>
                     <hr>
                     <div class="content">
+                        <div id="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                <span class="contact-info">
+                                   Fianarantsoa, Madagascar
+                                </span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                <span class="contact-info">
+                                    + 261 32 62 156 82
+                                </span>
+                            </div>
 
+                            <div class="contact-item">
+                                <span class="contact-icon">
+                                    <i class="fa-solid fa-at"></i>
+                                </span>
+                                <span class="contact-info">
+                                    laurenziosambany@gmail.com
+                                </span>
+                            </div>
+                        </div>
+                        <div id="contact-us">
+                            <div class="contact-us-input">
+                                <label> <span>Full Name</span><span> *</span></label>
+                                <input type="text" placeholder="your name" name="name">
+                            </div>
+                            <div class="contact-us-input">
+                                <label> <span>Email</span><span> *</span></label>
+                                <input type="email" placeholder="your email" name="email">
+                            </div>
+
+                            <div class="contact-us-input">
+                                <label> <span>Message</span><span> *</span></label>
+                                <textarea placeholder="your message" name="message"></textarea>
+                            </div>
+
+                            <button>
+                               <span>
+                                   <em>S</em><em>e</em><em>n</em><em>d</em><em> </em><em>M</em><em>e</em><em>s</em><em>s</em><em>a</em><em>g</em><em>e</em>
+                               </span>
+                               <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="others-contact">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -309,7 +363,5 @@
         loop: true
     });
 </script>
-
-</html>t>
 
 </html>
