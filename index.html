@@ -65,12 +65,12 @@
                             <span>Resume</span>
                         </div>
                     </li>
-                    <li name="works-card">
+                    <!-- <li name="works-card">
                         <div>
                             <i class="fa-solid fa-briefcase"></i>
                             <span>Works</span>
                         </div>
-                    </li>
+                    </li> -->
                     <li name="contact-card">
                         <div>
                             <i class="fa-solid fa-address-book"></i>
@@ -115,7 +115,7 @@
                 <div class="content">
                     <div class="cols">
                         <p>
-                            <span><</span> Hello World <span>/</span><span>></span> I am a Full stack Developer from Madagascar. I have rich experience in web development such as building website or web application.
+                            I am a Full stack Developer from Madagascar. I have rich experience in web development such as building website or web application.
                         </p>
                         <p>
                             Recently graduated with bachelor's degree in software development at "Ecole National d'Informatique", university of Madagascar.I am avalaible for hire to work as web developer.
@@ -132,7 +132,7 @@
             </ul>
         </div>
        </div>
-       <div class="title"><span>What</span> I do</div>
+       <!-- <div class="title"><span>What</span> I do</div>
                     <hr>
                     <div id="service-items">
                         <div class="service-item">
@@ -144,7 +144,7 @@
                                 Creation of a customised website or web application includes: web design, web content, client side and server side.
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="title"><span>Quotes</span></div>
                     <hr>
@@ -157,7 +157,7 @@
                                 <img src="./images/laurenzio.jpg" alt="">
                             </div>
                             <div id="author-name">
-                                Sambany Laurenzio
+                                SAMBANY M. Laurenzio
                             </div>
                         </div>
                     </div>
@@ -304,28 +304,29 @@
                                 </span>
                             </div>
                         </div>
-                        <div id="contact-us">
+                        <form onsubmit="sendEmail(); reset(); return false;" id="contact-us">
+                            
                             <div class="contact-us-input">
                                 <label> <span>Full Name</span><span> *</span></label>
-                                <input type="text" placeholder="your name" name="name">
+                                <input id="form_name" type="text" placeholder="Your Name" name="name" required>
                             </div>
                             <div class="contact-us-input">
                                 <label> <span>Email</span><span> *</span></label>
-                                <input type="email" placeholder="your email" name="email">
+                                <input  id="form_email" type="email" placeholder="Email" name="email" required>
                             </div>
 
                             <div class="contact-us-input">
                                 <label> <span>Message</span><span> *</span></label>
-                                <textarea placeholder="your message" name="message"></textarea>
+                                <textarea  id="form_message" placeholder="How can I help you?" name="message" required></textarea>
                             </div>
 
-                            <button>
+                            <button type="submit">
                                <span>
                                    <em>S</em><em>e</em><em>n</em><em>d</em><em> </em><em>M</em><em>e</em><em>s</em><em>s</em><em>a</em><em>g</em><em>e</em>
                                </span>
                                <i class="fa-solid fa-angle-right"></i>
                             </button>
-                        </div>
+                        </form>
                         <div class="others-contact">
 
                         </div>
@@ -353,6 +354,7 @@
 
 </body>
 
+<!-- Typed js  -->
 <script src="./assets/plugins/jquery/typed/typed.js"></script>
 <script>
     var typed = new Typed('#title', {
@@ -363,5 +365,30 @@
         loop: true
     });
 </script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("9rnAcmrhlZ_VUCiFo");
+   })();
+
+   function sendEmail(){
+    emailjs.send("service_dstllon","template_3f4ff3m",
+    {
+        to_name: "Laurenzio SAMBANY",
+        from_name: `${document.getElementById("form_name").value}, `+
+                    `email: ${document.getElementById("form_email").value}`,
+        message: document.getElementById("form_message").value,
+
+    }).then(function(response) {
+       alert('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+   }
+</script>
+
 
 </html>

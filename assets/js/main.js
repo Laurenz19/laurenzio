@@ -259,3 +259,10 @@ $('#button').find('span').mouseleave(function() {
         "transform": "scale(1)",
     })
 })
+
+/* Card Contact */
+
+$("#contact-us").submit(function(e){
+    e.preventDefault();
+    
+})
