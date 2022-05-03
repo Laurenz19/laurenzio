@@ -82,6 +82,11 @@ body {
     top:4px
 }
 
+#myself div a{
+   text-decoration: none;
+   color: rgb(226, 223, 223);
+}
+
 #myself div.self:nth-child(1){
    margin-bottom: 12px;
 }
@@ -508,6 +513,12 @@ div#social {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: bold;
+    color: rgb(33, 33, 33);
+}
+
+#button a {
+    text-decoration: none;
+    color: rgb(33, 33, 33);
 }
 
 #button span:hover {
@@ -1134,6 +1145,8 @@ To do list:
     with javascript 
     using email.js
  */
+
+ 
 
 
 

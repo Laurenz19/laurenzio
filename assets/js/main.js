@@ -71,6 +71,7 @@ $('#button').find('span:nth-child(2)').click(function() {
     showCard("contact-card");
 })
 
+
 /* Resume card */
 $('#experience').find('span').click(function() {
     let type = $(this).attr('class');
@@ -229,6 +230,20 @@ $('.next').mouseleave(function() {
     })
 })
 
+$('#submit_btn').hover(function() {
+    $('.cursor').css({
+        "transform": "scale(2)"
+    })
+})
+
+$('#submit_btn').mouseleave(function() {
+
+    $('.cursor').css({
+        "transform": "scale(1)"
+    })
+})
+
+
 $('#mySocial').find('li').hover(function() {
 
     $('.cursor').css({
@@ -264,5 +279,4 @@ $('#button').find('span').mouseleave(function() {
 
 $("#contact-us").submit(function(e){
     e.preventDefault();
-    
 })
