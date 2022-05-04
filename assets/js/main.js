@@ -2,7 +2,7 @@ import { showCard, browserName, menu, current } from './useful.js';
 
 
 /* Background */
-$('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>')
+/* $('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>') */
 
 /* Header & menu */
 
