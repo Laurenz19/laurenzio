@@ -1,7 +1,9 @@
 body {
     overflow: hidden;
-    background: rgb(5, 2, 36);
-    background: linear-gradient(90deg, rgba(5, 2, 36, 1) 0%, rgba(2, 12, 54, 1) 36%, rgba(2, 29, 39, 1) 91%);
+    /* background: rgb(5, 2, 36);
+    background: linear-gradient(90deg, rgba(5, 2, 36, 1) 0%, rgba(2, 12, 54, 1) 36%, rgba(2, 29, 39, 1) 91%); */
+    background: rgb(13,7,7);
+    background: linear-gradient(90deg, rgba(13,7,7,0.9500934162727591) 0%, rgba(36,25,1,1) 36%, rgb(24, 8, 0) 91%); 
     /* font-family: 'Signika Negative', sans-serif; */
     font-family: sans-serif;
     --position: 0
@@ -118,7 +120,7 @@ body {
 }
 
 #myself span {
-    color: #55708b;
+    color: rgb(146, 85, 5);
     font-size: 17px;
 }
 
@@ -294,7 +296,7 @@ header {
     position: absolute;
     top: 100px;
     left: 25px;
-    z-index: 1;
+    z-index: 2;
     color: rgb(7, 36, 59);
 }
 
@@ -313,6 +315,8 @@ header li span {
     font-size: 10px;
     font-weight: bold;
     margin: 5px;
+    font-weight: 600;
+    font-family: sans-serif;
 }
 
 header li div {
@@ -322,7 +326,7 @@ header li div {
 
 header li:hover {
     /* color:rgb(4, 34, 113) */
-    color: rgb(2, 57, 80);
+    color: rgb(146, 85, 5);
 }
 
 ul.principal>li:first-child {
@@ -340,6 +344,8 @@ ul.principal>li:first-child i {
 
 ul.top-menu li {
     border-bottom: 1px solid rgb(234, 233, 233);
+    font-size: 14px;
+    font-weight: bold;
 }
 
 ul.top-menu li:first-child {
@@ -364,7 +370,7 @@ div#home-card {
     top: 90px;
     left: 190px;
     z-index: 1;
-    box-shadow: -10px -15px rgba(31, 132, 132, 0.3), 19px -1px 25px -3px rgba(119, 117, 117, 0.2);
+    box-shadow: -15px -15px rgba(60, 51, 39, 0.477), 19px -1px 25px -3px rgba(119, 117, 117, 0.2);
 }
 
 
@@ -402,9 +408,10 @@ div#home-card {
 }
 
 #picture {
-    background-image: url("../../images/laurenzio.jpg");
+    background-image: url("../../images/cover-pic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 300px;
     border-radius: 3px;
 }
@@ -434,7 +441,7 @@ div#picture::after {
 div#name {
     position: absolute;
     display: block;
-    top: 315px;
+    top: 360px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -445,13 +452,14 @@ div#name {
 
 div#title {
     position: absolute;
-    top: 370px;
+    top: 390px;
     margin: 0 auto;
     width: 100%;
     font-size: 17px;
     text-align: center;
     font-weight: bold;
-    color: rgb(2, 51, 115);
+   /*  color: rgb(2, 51, 115); */
+   color: rgb(146, 85, 5);
 }
 
 div.titles {
@@ -464,7 +472,7 @@ div.titles {
 
 div#social {
     position: absolute;
-    top: 400px;
+    top: 425px;
     margin: 0 auto;
     width: 100%;
     text-align: center;
@@ -482,7 +490,7 @@ div#social {
 }
 
 #social i:hover {
-    color: rgb(95, 6, 173)
+    color: rgb(146, 85, 5);
 }
 
 #social i {
@@ -522,7 +530,7 @@ div#social {
 }
 
 #button span:hover {
-    color: rgb(95, 6, 173)
+    color: rgb(146, 85, 5);
 }
 
 #button span:nth-child(1)::before {
@@ -568,11 +576,16 @@ div.title {
     font-size: 20px;
     font-weight: bold;
     margin: 20px 25px;
+    color: rgb(89, 88, 88);
+}
+
+div.content .title{
     color: rgb(5, 42, 58);
 }
 
 div.title span {
-    color: rgb(4, 34, 113);
+    /* color: rgb(4, 34, 113); */
+    color: rgb(146, 85, 5);
 }
 
 div.title span::before {
@@ -581,7 +594,7 @@ div.title span::before {
     display: inline-block;
     left: 16px;
     top: 9px;
-    background: rgba(4, 34, 113, 0.09);
+    background: rgba(146, 85, 5, 0.2);
     height: 26px;
     width: 26px;
     border-radius: 26px;
@@ -979,14 +992,14 @@ codersrank-summary {
 
 /*
 To do list:
-    1- change the background to a particle.js
+
     2- add animate on scroll 
-    3- add contact and works content
+    3- add contact and works content (checked)
     4- Change the What I do field to a competence
-    5- Modify the download CV & Contact me button
+    5- Modify the download CV & Contact me button (checked)
     6- Sambany Michel Laurenzio animation (checked)
     7- Add a custom loader before the website is open
-    8- Create a custom pointer
+    8- Create a custom pointer (checked)
     9- Responsive 
 */
 
@@ -997,7 +1010,7 @@ To do list:
     display: inline-block;
     width: 35px;
     height: 35px;
-    background: rgba(81, 0, 233, 0.342);
+    background: rgba(146, 85, 5, 0.39);
     border-radius: 50%;
     position: fixed;
     top: 0px;
@@ -1041,7 +1054,7 @@ To do list:
 }
 
 .contact-item span:nth-child(1) i{
-    color: rgb(117, 37, 149);
+    color: rgb(146, 85, 5);
 }
 
 .contact-item span:nth-child(2){
@@ -1079,7 +1092,7 @@ To do list:
 }
 
 .contact-us-input label span:nth-child(2){
-    color: rgb(117, 37, 149);
+    color: rgb(146, 85, 5);
     font-size: 14px;
 }
 
@@ -1142,11 +1155,51 @@ To do list:
     here is the link 
     - or formspree
     
-    with javascript 
+    - with javascript 
     using email.js
- */
 
- 
+    ------------------------------------------------------
+        New Challenge: 
+        - modify the profile design
+        - and make the site responsive
+        - change the background animation to a particle
+    ------------------------------------------------------
+
+*/
+
+
+/* Adding profile picture */
+
+#picture .profile-pic{
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+    background: rgba(136, 62, 6, 0.5);
+    position: relative;
+    top: 200px;
+    left: -8px;
+    margin: 0 auto;
+    z-index: 300;
+   
+}
+
+#picture .profile-pic::after{
+    content: "";
+    height: 135px;
+    width: 135px;
+    border-radius: 70px;
+    position: relative;
+    left: 10px;
+    top:-10px;
+    display: block;
+    background-image: url("../../images/laurenzio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    border: rgb(26, 28, 39) 3px solid;
+}
+
+
 
 
 

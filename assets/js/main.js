@@ -7,7 +7,7 @@ $('#background').append('<ul class="circles"><li></li><li></li><li></li><li></li
 /* Header & menu */
 
 $('.top-menu').find('li:first').css({
-    "color": "rgb(4, 34, 113)"
+    "color": "rgb(146, 85, 5)"
 })
 
 $('.top-menu').find('li').click(function() {
@@ -17,7 +17,7 @@ $('.top-menu').find('li').click(function() {
     })
 
     $(this).css({
-        "color": "rgb(4, 34, 113)"
+        "color": "rgb(146, 85, 5)"
     })
     showCard(name);
 })
@@ -65,7 +65,7 @@ $('#button').find('span:nth-child(2)').click(function() {
     })
 
     $('.top-menu').find('li[name="contact-card"]').css({
-        "color": "rgb(4, 34, 113)"
+        "color": "rgb(146, 85, 5)"
     })
 
     showCard("contact-card");
@@ -196,7 +196,7 @@ $('.self-content').mouseleave(function() {
     console.log('hello')
     $('.cursor').css({
         "transform": "scale(1)",
-        "background": "rgba(81, 0, 233, 0.342)"
+        "background": "rgba(146, 85, 5, 0.39)"
     })
 })
 
@@ -243,6 +243,21 @@ $('#submit_btn').mouseleave(function() {
     })
 })
 
+$('#myContact').hover(function() {
+    $('.cursor').css({
+        "transform": "scale(2)",
+        "background": "rgba(255, 255, 255, 0.342)"
+    })
+})
+
+$('#myContact').mouseleave(function() {
+
+    $('.cursor').css({
+        "transform": "scale(1)",
+        "background": "rgba(146, 85, 5, 0.39)"
+    })
+})
+
 
 $('#mySocial').find('li').hover(function() {
 
@@ -256,7 +271,7 @@ $('#mySocial').find('li').mouseleave(function() {
     console.log('hello')
     $('.cursor').css({
         "transform": "scale(1)",
-        "background": "rgba(81, 0, 233, 0.342)"
+        "background": "rgba(146, 85, 5, 0.39)"
     })
 })
 
